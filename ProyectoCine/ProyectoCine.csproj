@@ -180,27 +180,39 @@
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Content\bootstrap-lumen.css" />
-    <Content Include="Content\bootstrap.css" />
-    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\css\bootstrap-lumen.css" />
+    <Content Include="Content\css\bootstrap-solar.css" />
+    <Content Include="Content\css\bootstrap.css" />
+    <Content Include="Content\css\bootstrap.min.css" />
+    <Content Include="Content\tp\file-page-01.jpg" />
+    <Content Include="Content\tp\file-page-02.jpg" />
+    <Content Include="Content\tp\file-page-03.jpg" />
+    <Content Include="Content\tp\file-page-04.jpg" />
+    <Content Include="Content\tp\file-page-05.jpg" />
+    <Content Include="Content\tp\file-page-06.jpg" />
+    <Content Include="Content\tp\file-page-07.jpg" />
+    <Content Include="Content\tp\file-page-08.jpg" />
+    <Content Include="Content\tp\file-page-09.jpg" />
+    <Content Include="Content\tp\file-page-10.jpg" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
-    <Content Include="Content\Site.css" />
-    <Content Include="Scripts\bootstrap.js" />
-    <Content Include="Scripts\bootstrap.min.js" />
-    <None Include="Scripts\jquery-1.10.2.intellisense.js" />
-    <Content Include="Scripts\jquery-1.10.2.js" />
-    <Content Include="Scripts\jquery-1.10.2.min.js" />
-    <None Include="Scripts\jquery.validate-vsdoc.js" />
-    <Content Include="Scripts\jquery.validate.js" />
-    <Content Include="Scripts\jquery.validate.min.js" />
-    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
-    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
-    <Content Include="Scripts\modernizr-2.6.2.js" />
-    <Content Include="Scripts\respond.js" />
-    <Content Include="Scripts\respond.min.js" />
-    <Content Include="Scripts\_references.js" />
+    <Content Include="Content\css\Site.css" />
+    <Content Include="Scripts\common.js" />
+    <Content Include="Scripts\vendor\bootstrap.js" />
+    <Content Include="Scripts\vendor\bootstrap.min.js" />
+    <None Include="Scripts\vendor\jquery-1.10.2.intellisense.js" />
+    <Content Include="Scripts\vendor\jquery-1.10.2.js" />
+    <Content Include="Scripts\vendor\jquery-1.10.2.min.js" />
+    <None Include="Scripts\vendor\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\vendor\jquery.validate.js" />
+    <Content Include="Scripts\vendor\jquery.validate.min.js" />
+    <Content Include="Scripts\vendor\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\vendor\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\vendor\modernizr-2.6.2.js" />
+    <Content Include="Scripts\vendor\respond.js" />
+    <Content Include="Scripts\vendor\respond.min.js" />
+    <Content Include="Scripts\vendor\_references.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -245,7 +257,7 @@
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="packages.config" />
     <None Include="Project_Readme.html" />
-    <Content Include="Scripts\jquery-1.10.2.min.map" />
+    <Content Include="Scripts\vendor\jquery-1.10.2.min.map" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
