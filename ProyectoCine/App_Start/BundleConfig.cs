@@ -24,8 +24,8 @@ namespace ProyectoCine
                       "~/Scripts/vendor/respond.js"));
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
-                      "~/Content/css/bootstrap-solar.css",
-                      "~/Content/css/site.css"));
+                      "~/Content/css/bootstrap.css",
+                      "~/Content/css/Site.css"));
         }
     }
 }
