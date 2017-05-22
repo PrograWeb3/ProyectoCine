@@ -15,7 +15,7 @@ namespace ProyectoCine
 
             routes.MapRoute(
                 name: "Admin",
-                url: "administracion/peliculas/{id}",
+                url: "administracion/peliculas/{action}",
                 defaults: new { controller = "Movies", action = "Index", id = UrlParameter.Optional }
             );
             routes.MapRoute(

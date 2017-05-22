@@ -8,6 +8,37 @@ namespace ProyectoCine.Models
 {
     public class Movie
     {
+        public static List<Movie> movies = new List<Movie>
+        {
+            new Movie
+            {
+                Id = 1,
+                Title = "The Lord of the Rings",
+                Description = "Peli con elfos, hobbits, ogros y dementores. Basada en hechos reales de la Edad Media.",
+                Clasification = "PG-13",
+                Genre = "Fantasía",
+                Duration = "15:10"
+            },
+            new Movie
+            {
+                Id = 2,
+                Title = "Los Vengadores",
+                Description = "Grupete en calzas que salva al mundo de bichos de otras dimensiones. Basada en el comics de Marvel",
+                Clasification = "PG-13",
+                Genre = "Superheroes",
+                Duration = "02:54"
+            },
+            new Movie
+            {
+                Id = 3,
+                Title = "Batman",
+                Description = "Hombre que se cree un murciélago. Basada en los comics de DC",
+                Clasification = "PG-18",
+                Genre = "Superheroes",
+                Duration = "02:24"
+            }
+        };
+
         public int Id { get; set; }
 
         [Required]
