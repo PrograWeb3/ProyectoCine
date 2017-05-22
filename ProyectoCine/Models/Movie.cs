@@ -42,6 +42,9 @@ namespace ProyectoCine.Models
         [RegularExpression(@"^\d{2}\:[0-5]\d$", ErrorMessage = "El formato de duración ingresado es inválido")]
         public string Duration { get; set; }
 
+
+
+        // Probando alternativa al string Duration
         private int minuteDuration;
 
         public string MinuteDuration

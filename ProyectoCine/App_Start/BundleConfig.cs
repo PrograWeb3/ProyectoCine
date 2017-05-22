@@ -14,6 +14,14 @@ namespace ProyectoCine
             bundles.Add(new ScriptBundle("~/bundles/jqueryval").Include(
                         "~/Scripts/vendor/jquery.validate*"));
 
+            bundles.Add(new ScriptBundle("~/bundles/jslib").Include(
+                        "~/scripts/vendor/bootbox.js",
+                        "~/scripts/vendor/datatables/jquery.datatables.js",
+                        "~/scripts/vendor/datatables/datatables.bootstrap.js",
+                        "~/scripts/vendor/typeahead.bundle.js",
+                        "~/scripts/vendor/toastr.js"
+                      ));
+
             // Use the development version of Modernizr to develop with and learn from. Then, when you're
             // ready for production, use the build tool at http://modernizr.com to pick only the tests you need.
             bundles.Add(new ScriptBundle("~/bundles/modernizr").Include(
@@ -26,6 +34,11 @@ namespace ProyectoCine
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/css/bootstrap.css",
                       "~/Content/css/Site.css"));
+
+            bundles.Add(new StyleBundle("~/Content/csslib").Include(
+                      "~/Content/css/datatables/css/datatables.bootstrap.css",
+                      "~/Content/css/typeahead.css",
+                      "~/Content/css/toastr.css"));
         }
     }
 }

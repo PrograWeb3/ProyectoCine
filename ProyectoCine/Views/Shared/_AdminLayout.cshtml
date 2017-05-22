@@ -1,0 +1,84 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+
+    <!--los styles luego los mandamos a Site.css, ahora para probar nomas-->
+    <style>
+        .temp-banner {
+            background-color: lightgray;
+            height: 148px;
+            width: auto;
+        }
+
+            .temp-banner p {
+                text-align: center;
+                font-style: italic;
+                padding: 40px;
+                font-size: 48px;
+            }
+
+        .navbar .navbar-collapse {
+            width: 100%;
+            text-align: center;
+        }
+    </style>
+
+</head>
+<body>
+
+    <!-- ENCABEZADO -->
+    <div class="temp-banner">
+        <p class="lead">BANNER</p>
+    </div>
+
+    <!-- MENU NAV -->
+    <div class="navbar navbar-default">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                @Html.ActionLink("Cartelera", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li>@Html.ActionLink("Complejos", "Index", "Home")</li>
+                    <li>@Html.ActionLink("Promociones", "Index", "Home")</li>
+                    <li>@Html.ActionLink("Nosotros", "About", "Home")</li>
+                    <li>@Html.ActionLink("Contacto", "Contact", "Home")</li>
+                </ul>
+                @Html.Partial("_LoginPartial")
+            </div>
+        </div>
+    </div>
+
+
+
+    <!--- BODY MAIN -->
+    <div class="container body-content">
+        @RenderBody()
+
+
+
+        <hr />
+        <!-- FOOTER -->
+        <footer>
+            <p>&copy; @DateTime.Now.Year - Unlam 2017 - Buenos Aires, Argentina</p>
+        </footer>
+    </div>
+
+    <!-- SCRIPTS -->
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+
+</body>
+
+</html>

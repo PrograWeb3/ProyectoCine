@@ -1,4 +1,4 @@
-﻿@model IEnumerable<ProyectoCine.Models.Movie>
+﻿@model ProyectoCine.Models.Movie
 
 @{
     ViewBag.Title = "Inicio";
@@ -12,9 +12,12 @@
 <table id="movies" class="table table-bordered table-hover">
     <thead>
         <tr>
-            <th>Movie</th>
-            <th>Genre</th>
-            <th>Delete</th>
+            <th>@Html.DisplayNameFor(Model => Model.Id)</th>
+            <th>@Html.DisplayNameFor(Model => Model.Title)</th>
+            <th>@Html.DisplayNameFor(Model => Model.Clasification)</th>
+            <th>@Html.DisplayNameFor(Model => Model.Genre)</th>
+            <th>@Html.DisplayNameFor(Model => Model.Duration)</th>
+            <th>Eliminar</th>
         </tr>
     </thead>
     <tbody></tbody>
@@ -22,32 +25,40 @@
 @section scripts
 {
     <script>
+        //$(document).ready(function () {
+        //    $.get("/api/movies", function (data) {
+        //        console.log(data);
+        //    });
+        //});
+        
+        
         $(document).ready(function () {
+        
             var table = $("#movies").DataTable({
                 ajax: {
                     url: "/api/movies",
                     dataSrc: ""
                 },
                 columns: [
-                    {
-                        data: "name",
-                        render: function(data, type, movie) {
-                            return "<a href='/movies/edit/" + movie.id + "'>" + movie.name + "</a>";
+                    { data: "Id" },
+                    { 
+                        data: "Title",
+                        render: function(data, type, row) {
+                            return "<a href='/movies/edit/" + row.Id + "'>" + data + "</a>";
                         }
                     },
+                    { data: "Clasification" },
+                    { data: "Genre" },
+                    { data: "Duration" },
                     {
-                        data: "genre.name"
-                    },
-                    {
-                        data: "id",
+                        data: "Id",
                         render: function(data) {
                             return "<button class='btn-link js-delete' data-movie-id=" + data + ">Delete</button>";
                         }
                     }
                 ]
             });
-
-
+        
             $("#movies").on("click", ".js-delete", function () {
                 var button = $(this);
 
@@ -63,6 +74,8 @@
                     }
                 });
             });
+
+
         });
     </script>
 }
